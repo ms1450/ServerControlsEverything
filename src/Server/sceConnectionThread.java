@@ -40,11 +40,11 @@ public class sceConnectionThread extends Thread{
             //and sends out a text accordingly
             ArrayList<String> usercodes = database.getUserCodes();
             if(usercodes.contains(Integer.toString(usrcode))){
-                output.println("Welcome Back "+usrcode);
+                output.println("Welcome Back User #"+usrcode);
             }
             else{
                 database.addUser(Integer.toString(usrcode));
-                output.println("Added User to Database "+usrcode);
+                output.println("Welcome to SCE User #"+usrcode);
             }
             output.flush();
 
@@ -62,7 +62,8 @@ public class sceConnectionThread extends Thread{
                 database.createConversation(filename);
             }
 
-            output.println("New Messages will now be Stored in the Database, Enter QUIT to Exit");
+            output.println("<SERVER> You can now start adding messages to the database");
+            output.println("<SERVER> Type 'EXIT' to end connection, 'REFRESH' to update messages");
             output.flush();
 
             //Starts the storeData thread

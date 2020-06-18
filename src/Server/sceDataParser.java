@@ -37,7 +37,7 @@ public class sceDataParser extends Thread{
                 e.printStackTrace();
             }
             //client sends 'QUIT'
-            if (line != null && line.equals("QUIT")) {
+            if (line != null && line.equals("EXIT")) {
                 sceConnectionThread.running = false;
                 running = false;
             }
