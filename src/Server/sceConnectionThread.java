@@ -40,11 +40,11 @@ public class sceConnectionThread extends Thread{
             //and sends out a text accordingly
             ArrayList<String> usercodes = database.getUserCodes();
             if(usercodes.contains(Integer.toString(usrcode))){
-                output.println("Welcome Back User #"+usrcode);
+                output.println("<SERVER> Welcome Back User #"+usrcode);
             }
             else{
                 database.addUser(Integer.toString(usrcode));
-                output.println("Welcome to SCE User #"+usrcode);
+                output.println("<SERVER> Welcome to SCE User #"+usrcode);
             }
             output.flush();
 
